@@ -24,6 +24,11 @@ export default [
     languageOptions: { ecmaVersion: 2023, sourceType: 'module', globals: globals.node },
   },
   {
+    // Drives a browser: page.evaluate() callbacks run in the page.
+    files: ['scripts/store-assets.js'],
+    languageOptions: { globals: { ...globals.node, ...globals.browser } },
+  },
+  {
     // Tests run in Node, but page.evaluate() callbacks run in the browser.
     files: ['tests/**/*.js'],
     languageOptions: {

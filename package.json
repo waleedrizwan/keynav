@@ -22,6 +22,7 @@
     "test:all": "npm test && npm run test:e2e",
     "check": "npm run lint && npm run typecheck && npm run format:check",
     "icons": "node scripts/icons.js",
+    "store:assets": "node scripts/store-assets.js",
     "package": "node scripts/package.js"
   },
   "engines": {

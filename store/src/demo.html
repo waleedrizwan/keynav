@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Field Notes</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font:
+          15px/1.55 -apple-system,
+          'Segoe UI',
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        color: #1d2330;
+        background: #f6f7fb;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        padding: 14px 40px;
+        background: #fff;
+        border-bottom: 1px solid #e3e6ee;
+      }
+      .logo {
+        font-weight: 800;
+        font-size: 19px;
+        letter-spacing: -0.3px;
+        color: #1d2330;
+        text-decoration: none;
+      }
+      nav {
+        display: flex;
+        gap: 22px;
+      }
+      nav a {
+        color: #4a5368;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .search {
+        margin-left: auto;
+        width: 240px;
+        padding: 8px 12px;
+        border: 1px solid #d6dae4;
+        border-radius: 8px;
+        font: inherit;
+        background: #f6f7fb;
+      }
+      .btn {
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: 0;
+        background: #3b5bdb;
+        color: #fff;
+        font: 600 14px/1 inherit;
+        cursor: pointer;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: #3b5bdb;
+        border: 1px solid #c5d0f5;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 32px;
+        padding: 32px 40px;
+        max-width: 1280px;
+      }
+      .hero {
+        background: #fff;
+        border-radius: 14px;
+        padding: 28px;
+        border: 1px solid #e3e6ee;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        color: #3b5bdb;
+        background: #edf1ff;
+        padding: 3px 9px;
+        border-radius: 99px;
+        margin-right: 6px;
+        text-decoration: none;
+      }
+      h1 {
+        margin: 12px 0 8px;
+        font-size: 30px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+      }
+      .meta {
+        color: #6b7385;
+        font-size: 13px;
+        margin-bottom: 14px;
+      }
+      .meta a {
+        color: #3b5bdb;
+        text-decoration: none;
+      }
+      p {
+        margin: 0 0 14px;
+        color: #3a4254;
+      }
+      .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 22px;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e3e6ee;
+        border-radius: 12px;
+        padding: 16px 18px;
+        cursor: pointer;
+      }
+      .card h3 {
+        margin: 6px 0 4px;
+        font-size: 16px;
+      }
+      .card p {
+        margin: 0;
+        font-size: 13px;
+        color: #6b7385;
+      }
+      aside .box {
+        background: #fff;
+        border: 1px solid #e3e6ee;
+        border-radius: 12px;
+        padding: 18px;
+        margin-bottom: 18px;
+      }
+      aside h4 {
+        margin: 0 0 10px;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: #6b7385;
+      }
+      aside ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      aside li {
+        padding: 6px 0;
+        border-bottom: 1px solid #f0f2f7;
+      }
+      aside li:last-child {
+        border: 0;
+      }
+      aside li a {
+        color: #1d2330;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .sub {
+        display: flex;
+        gap: 8px;
+      }
+      .sub input {
+        flex: 1;
+        padding: 8px 10px;
+        border: 1px solid #d6dae4;
+        border-radius: 8px;
+        font: inherit;
+      }
+      label {
+        font-size: 13px;
+        color: #4a5368;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">Field Notes</a>
+      <nav>
+        <a href="#">Latest</a><a href="#">Guides</a><a href="#">Tools</a><a href="#">Community</a>
+      </nav>
+      <input class="search" placeholder="Search articles…" />
+      <button class="btn ghost">Sign in</button>
+    </header>
+    <main>
+      <section>
+        <article class="hero">
+          <a class="tag" href="#">Productivity</a><a class="tag" href="#">Keyboard</a>
+          <h1>Ten habits that make your browser feel twice as fast</h1>
+          <div class="meta">
+            By <a href="#">Sam Ortega</a> · 6 min read · <a href="#">12 comments</a>
+          </div>
+          <p>
+            Most of the time you spend in a browser isn't reading; it's reaching. Reaching for the
+            mouse, finding the link, aiming at the button. Cut that out and the web starts to feel
+            instant.
+          </p>
+          <p>
+            Here are the small changes that add up, from keeping your hands on the home row to
+            letting your tools find the targets for you.
+          </p>
+          <div class="actions">
+            <button class="btn">Continue reading</button
+            ><button class="btn ghost">Save for later</button
+            ><button class="btn ghost">Share</button>
+          </div>
+        </article>
+        <div class="cards">
+          <div class="card" onclick="">
+            <span class="tag">Guide</span>
+            <h3>Navigate any site from the home row</h3>
+            <p>Labels, step-through and scrolling, explained.</p>
+          </div>
+          <div class="card" onclick="">
+            <span class="tag">Tips</span>
+            <h3>Tab management without the trackpad</h3>
+            <p>Open, close and switch tabs in a keystroke.</p>
+          </div>
+          <div class="card" onclick="">
+            <span class="tag">Accessibility</span>
+            <h3>Why keyboard access matters</h3>
+            <p>Who benefits, and how sites can do better.</p>
+          </div>
+          <div class="card" onclick="">
+            <span class="tag">Deep dive</span>
+            <h3>How click detection really works</h3>
+            <p>Event listeners, cursors and the shadow DOM.</p>
+          </div>
+        </div>
+      </section>
+      <aside>
+        <div class="box">
+          <h4>Trending</h4>
+          <ul>
+            <li><a href="#">Five shortcuts you're not using</a></li>
+            <li><a href="#">The case for fewer tabs</a></li>
+            <li><a href="#">Reading mode, revisited</a></li>
+            <li><a href="#">A calmer inbox in a week</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h4>Newsletter</h4>
+          <div class="sub">
+            <input placeholder="you@example.com" /><button class="btn">Join</button>
+          </div>
+          <label><input type="checkbox" /> Weekly digest</label>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
