@@ -1,0 +1,28 @@
+name: Bug report
+description: Something doesn't work the way it should
+labels: [bug]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: Where did it happen? Leave blank if the page is private.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you pressed, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 142 on macOS 26
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Keynav version
+      description: Shown on the Keynav card in chrome://extensions.

@@ -1,0 +1,33 @@
+{
+  "name": "keynav",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mouse-free browsing for Chrome: label every clickable element and hit it with the keyboard.",
+  "license": "MIT",
+  "author": "Waleed Rizwan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waleedrizwan/keynav.git"
+  },
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm run format:check",
+    "package": "node scripts/package.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/chrome": "^0.3.7",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.0",
+    "typescript": "^7.0.2"
+  }
+}
