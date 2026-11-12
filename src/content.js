@@ -376,6 +376,9 @@
   }
 
   function onKey(e) {
+    // Ignore keys synthesized by page scripts; otherwise any site could close tabs,
+    // open tabs or click elements by dispatching fake KeyboardEvents.
+    if (!e.isTrusted) return;
     if (e.isComposing) return;
 
     if (mode === 'hints') {
