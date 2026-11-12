@@ -7,6 +7,11 @@ All notable changes to this project are documented here. The format is based on 
 ### Added
 
 - Extension icon and toolbar button.
+- Unit tests (Vitest) and browser tests (Playwright) running in CI.
+
+### Security
+
+- Ignore keyboard events synthesized by page scripts. Previously any website could dispatch fake key presses to close the tab, open tabs, or click and open links through Keynav.
 
 ## [0.1.0] - 2026-11-12
 

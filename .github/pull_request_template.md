@@ -8,7 +8,8 @@
 
 ## Checklist
 
-- [ ] `npm run check` passes
+- [ ] `npm run check` and `npm run test:all` pass
+- [ ] Added or updated tests
 - [ ] Tested in Chrome with the unpacked extension
 - [ ] Updated `CHANGELOG.md` (if user-visible)
 - [ ] Updated `PRIVACY.md` (if data handling changed)

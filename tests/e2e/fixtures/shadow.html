@@ -1,0 +1,20 @@
+<!doctype html>
+<title>shadow dom</title>
+<link rel="stylesheet" href="style.css" />
+<script src="log.js"></script>
+<open-box class="row"></open-box>
+<closed-box class="row"></closed-box>
+<button class="row" data-id="last">last</button>
+<script>
+  const make = (mode, id) =>
+    class extends HTMLElement {
+      connectedCallback() {
+        const root = this.attachShadow({ mode });
+        root.innerHTML = `<button style="height:30px">${id}</button>`;
+        // Shadow clicks are retargeted to the host by the time they reach document.
+        root.querySelector('button').addEventListener('click', () => window.log.push(id));
+      }
+    };
+  customElements.define('open-box', make('open', 'open'));
+  customElements.define('closed-box', make('closed', 'closed'));
+</script>

@@ -1,0 +1,23 @@
+<!doctype html>
+<title>app-style scroll</title>
+<style>
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  header {
+    height: 50px;
+  }
+  main {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+  }
+</style>
+<header>fixed header</header>
+<main id="main"><div style="height: 5000px">inner content</div></main>

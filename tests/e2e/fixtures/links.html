@@ -1,0 +1,13 @@
+<!doctype html>
+<title>links</title>
+<link rel="stylesheet" href="style.css" />
+<script src="log.js"></script>
+<a class="row" data-id="l0" href="target.html?0">link 0</a>
+<a class="row" data-id="l1" href="target.html?1">link 1</a>
+<a class="row" data-id="js" href="javascript:void(window.log.push('js-href'))">js link</a>
+<script>
+  // Keep link clicks on this page so the click log survives.
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('a[href^="target"]')) e.preventDefault();
+  });
+</script>

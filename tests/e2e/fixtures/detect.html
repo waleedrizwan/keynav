@@ -1,0 +1,23 @@
+<!doctype html>
+<title>detection</title>
+<link rel="stylesheet" href="style.css" />
+<script src="log.js"></script>
+<!-- Only #js, #pointer and #last should get labels, in that order. -->
+<button class="row" data-id="hidden" style="visibility: hidden">hidden</button>
+<div class="row" data-id="js" id="js">div with a JS click handler</div>
+<button class="row" data-id="transparent" style="opacity: 0">opacity 0</button>
+<button data-id="tiny" style="width: 2px; height: 2px; padding: 0; border: 0"></button>
+<div style="position: relative" class="row">
+  <button class="row" data-id="covered">covered</button>
+  <div style="position: absolute; inset: 0; background: #ccc">overlay</div>
+</div>
+<div class="row" data-id="pointer" style="cursor: pointer">
+  pointer parent <span style="cursor: pointer">pointer child</span>
+</div>
+<button class="row" data-id="disabled" disabled>disabled</button>
+<a class="row">anchor without href</a>
+<button class="row" data-id="last">last</button>
+<button data-id="offscreen" style="position: absolute; top: 3000px">offscreen</button>
+<script>
+  js.addEventListener('click', () => {});
+</script>

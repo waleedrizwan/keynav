@@ -1,0 +1,16 @@
+<!doctype html>
+<title>buttons</title>
+<link rel="stylesheet" href="style.css" />
+<script src="log.js"></script>
+<div id="list"></div>
+<script>
+  // ?n=<count> buttons, one per row, ids b0..b(n-1)
+  const n = Number(new URLSearchParams(location.search).get('n') || 3);
+  for (let i = 0; i < n; i++) {
+    const b = document.createElement('button');
+    b.className = 'row';
+    b.dataset.id = 'b' + i;
+    b.textContent = 'Button ' + i;
+    list.append(b);
+  }
+</script>

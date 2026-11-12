@@ -75,7 +75,8 @@ Requires Node.js 20 or later.
 
 ```bash
 npm install
-npm run check      # lint + typecheck + format check (what CI runs)
+npm run check      # lint + typecheck + format check
+npm run test:all   # unit tests + browser tests
 ```
 
 | Script                 | What it does                                                         |
@@ -84,10 +85,19 @@ npm run check      # lint + typecheck + format check (what CI runs)
 | `npm run typecheck`    | TypeScript in strict mode over the JavaScript, using `@types/chrome` |
 | `npm run format`       | Format everything with Prettier                                      |
 | `npm run format:check` | Check formatting without changing files                              |
+| `npm test`             | Unit tests (Vitest)                                                  |
+| `npm run test:e2e`     | Browser tests: real Chromium with the extension loaded (Playwright)  |
 | `npm run icons`        | Regenerate `src/icons/*.png` from the SVGs in `assets/`              |
 | `npm run package`      | Zip `src/` into `dist/` for the Chrome Web Store                     |
 
 After editing files in `src/`, click the reload icon on the Keynav card in `chrome://extensions`, then reload the page you're testing.
+
+## Testing
+
+- **Unit tests** (`tests/unit/`, Vitest) cover the service worker's tab logic and the click-handler hook in `main-world.js`, with a mocked `chrome` API.
+- **Browser tests** (`tests/e2e/`, Playwright) load `src/` as an unpacked extension in Chromium and drive it with real key presses against local fixture pages in `tests/e2e/fixtures/`. They cover every key binding, the detection rules, shadow DOM, text-field handling, tabs, and security (for example, that page scripts can't trigger Keynav with fake key events).
+
+The first time, install the browser with `npx playwright install chromium`. Set `HEADED=1` to watch the browser tests run.
 
 ## Known limitations
 
