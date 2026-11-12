@@ -15,7 +15,7 @@ Sites where clickable elements aren't detected are especially useful reports.
 ## Making changes
 
 1. Fork the repo and create a branch from `main`.
-2. Install the dev tools: `npm install` (Node.js 20+).
+2. Install the dev tools: `npm install` (Node.js 22+).
 3. Load `src/` as an unpacked extension in `chrome://extensions` (Developer mode on).
 4. Make your change, then reload the extension and test it on a few real sites.
 5. Run `npm run check` and `npm run test:all` and make sure both pass. `npm run format` fixes formatting for you. New behaviour should come with a test; browser tests go in `tests/e2e/` with a fixture page in `tests/e2e/fixtures/`.
