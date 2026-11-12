@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2d2f48"/>
+      <stop offset="1" stop-color="#121320"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe680"/>
+      <stop offset="1" stop-color="#ffcf2e"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+  <!-- tile -->
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="url(#bg)"/>
+  <!-- focus ring with glow -->
+  <rect x="24" y="22" width="80" height="84" rx="18" fill="none" stroke="#ff3b7f" stroke-width="6" opacity=".55" filter="url(#glow)"/>
+  <rect x="24" y="22" width="80" height="84" rx="18" fill="none" stroke="#ff3b7f" stroke-width="4"/>
+  <!-- keycap: base, then face -->
+  <rect x="34" y="34" width="60" height="64" rx="12" fill="#b89400"/>
+  <rect x="34" y="32" width="60" height="58" rx="12" fill="url(#cap)"/>
+  <rect x="40" y="36" width="48" height="8" rx="4" fill="#fff" opacity=".35"/>
+  <!-- F -->
+  <path fill="#1a1a1a" d="M52 46h27v10H63v6h13v9H63v12H52z"/>
+</svg>

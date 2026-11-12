@@ -17,6 +17,7 @@
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
     "check": "npm run lint && npm run typecheck && npm run format:check",
+    "icons": "node scripts/icons.js",
     "package": "node scripts/package.js"
   },
   "engines": {
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@resvg/resvg-js": "^2.6.2",
     "@types/chrome": "^0.3.7",
     "eslint": "^10.14.0",
     "globals": "^17.14.0",

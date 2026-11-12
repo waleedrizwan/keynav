@@ -1,4 +1,8 @@
-# Keynav
+<p align="center">
+  <img src="assets/icon-256.png" width="128" height="128" alt="Keynav icon">
+</p>
+
+<h1 align="center">Keynav</h1>
 
 [![CI](https://github.com/waleedrizwan/keynav/actions/workflows/ci.yml/badge.svg)](https://github.com/waleedrizwan/keynav/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -58,6 +62,9 @@ src/                  The extension itself (load this folder in Chrome)
   main-world.js       Runs in the page's JS world at document_start to tag click handlers
   content.js          Hint labels, step-through mode, scrolling and key handling
   background.js       Service worker for tab actions (open, close, switch)
+  icons/              Generated PNG icons (see assets/)
+assets/               Icon SVG sources and README artwork
+scripts/icons.js      Renders the PNG icons from assets/*.svg
 scripts/package.js    Builds dist/keynav-<version>.zip for the Chrome Web Store
 types/                Type declarations used by the type checker
 ```
@@ -77,6 +84,7 @@ npm run check      # lint + typecheck + format check (what CI runs)
 | `npm run typecheck`    | TypeScript in strict mode over the JavaScript, using `@types/chrome` |
 | `npm run format`       | Format everything with Prettier                                      |
 | `npm run format:check` | Check formatting without changing files                              |
+| `npm run icons`        | Regenerate `src/icons/*.png` from the SVGs in `assets/`              |
 | `npm run package`      | Zip `src/` into `dist/` for the Chrome Web Store                     |
 
 After editing files in `src/`, click the reload icon on the Keynav card in `chrome://extensions`, then reload the page you're testing.

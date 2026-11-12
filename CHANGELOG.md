@@ -4,6 +4,10 @@ All notable changes to this project are documented here. The format is based on 
 
 ## [Unreleased]
 
+### Added
+
+- Extension icon and toolbar button.
+
 ## [0.1.0] - 2026-11-12
 
 ### Added
